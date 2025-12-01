@@ -5,37 +5,40 @@ metadata:
   maintainer: Waldek Herka
   updatedAt: '2025-11-29T22:02:24.607Z'
 sources:
-  - id: awesome-copilot-official
-    name: Awesome Copilot (Official)
-    type: github
-    url: https://github.com/github/awesome-copilot
-    enabled: true
-    priority: 1
-    metadata:
-      description: Official Awesome Copilot collections from GitHub
-      homepage: https://github.com/github/awesome-copilot
+- id: awesome-copilot-official
+  name: Awesome Copilot (Official)
+  type: awesome-copilot
+  url: https://github.com/github/awesome-copilot
+  enabled: true
+  priority: 1
+  metadata:
+    description: Official Awesome Copilot collections from GitHub
+    homepage: https://github.com/github/awesome-copilot
+  config:
+    branch: main
+    collectionsPath: collections
 profiles:
-  - id: developer
-    name: Developer
-    description: Prompts for developers
-    bundles:
-      - id: frontend-web-dev
-        version: latest
-        source: awesome-copilot-official
-        required: true
-  - id: qa
-    name: QA
-    description: Prompts for QA
-    bundles:
-      - id: testing-automation
-        version: latest
-        source: awesome-copilot-official
-        required: true
-  - id: mcp-developer
-    name: MCP Developer
-    description: Prompts for MCP Dev
-    bundles:
-      - id: python-mcp-development
-        version: latest
-        source: awesome-copilot-official
-        required: true
+- id: developer
+  name: Developer
+  description: Prompts for developers
+  bundles:
+  - id: frontend-web-dev
+    version: latest
+    source: awesome-copilot-official
+    required: true
+- id: qa
+  name: QA
+  description: Prompts for QA
+  bundles:
+  - id: testing-automation
+    version: latest
+    source: awesome-copilot-official
+    required: true
+- id: mcp-developer
+  name: MCP Developer
+  description: Prompts for MCP Dev
+  bundles:
+  - id: python-mcp-development
+    version: latest
+    source: awesome-copilot-official
+    required: true
