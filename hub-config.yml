@@ -17,6 +17,17 @@ sources:
   config:
     branch: main
     collectionsPath: collections
+
+- id: awesome-copilot-skills-official
+  name: Awesome Copilot Skills (Official)
+  type: skills
+  url: https://github.com/github/awesome-copilot/skills
+  enabled: true
+  priority: 10
+  metadata:
+    description: Official Awesome Copilot Skills from GitHub
+    homepage: https://github.com/github/awesome-copilot/skills
+
 profiles:
 # Roles
 - id: frontend-developer
@@ -36,6 +47,22 @@ profiles:
   - id: security-best-practices
     version: latest
     source: awesome-copilot-official
+    required: true
+  - id: skills-github-awesome-copilot-webapp-testing
+    version: latest
+    source: awesome-copilot-skills-official
+    required: true
+  - id: skills-github-awesome-copilot-web-design-reviewer
+    version: latest
+    source: awesome-copilot-skills-official
+    required: true
+  - id: skills-github-awesome-copilot-chrome-devtools
+    version: latest
+    source: awesome-copilot-skills-official
+    required: true
+  - id: skills-github-awesome-copilot-image-manipulation-image-magick
+    version: latest
+    source: awesome-copilot-skills-official
     required: true
 
 - id: backend-developer
@@ -122,6 +149,38 @@ profiles:
     version: latest
     source: awesome-copilot-official
     required: true
+  - id: skills-github-awesome-copilot-appinsights-instrumentation
+    version: latest
+    source: awesome-copilot-skills-official
+    required: true
+  - id: skills-github-awesome-copilot-azure-deployment-preflight
+    version: latest
+    source: awesome-copilot-skills-official
+    required: true
+  - id: skills-github-awesome-copilot-azure-devops-cli
+    version: latest
+    source: awesome-copilot-skills-official
+    required: true
+  - id: skills-github-awesome-copilot-azure-resource-visualizer
+    version: latest
+    source: awesome-copilot-skills-official
+    required: true
+  - id: skills-github-awesome-copilot-azure-role-selector
+    version: latest
+    source: awesome-copilot-skills-official
+    required: true
+  - id: skills-github-awesome-copilot-azure-static-web-apps
+    version: latest
+    source: awesome-copilot-skills-official
+    required: true
+  - id: skills-github-awesome-copilot-gh-cli
+    version: latest
+    source: awesome-copilot-skills-official
+    required: true
+  - id: skills-github-awesome-copilot-github-issues
+    version: latest
+    source: awesome-copilot-skills-official
+    required: true
 
 - id: ai-engineer
   name: AI Engineer
@@ -140,6 +199,10 @@ profiles:
   - id: python-mcp-development
     version: latest
     source: awesome-copilot-official
+    required: true
+  - id: skills-github-awesome-copilot-agentic-eval
+    version: latest
+    source: awesome-copilot-skills-official
     required: true
 
 - id: mcp-developer
@@ -187,6 +250,10 @@ profiles:
   - id: php-mcp-development
     version: latest
     source: awesome-copilot-official
+    required: true
+  - id: skills-github-awesome-copilot-mcp-cli
+    version: latest
+    source: awesome-copilot-skills-official
     required: true
 
 - id: openapi-developer
@@ -238,6 +305,14 @@ profiles:
     version: latest
     source: awesome-copilot-official
     required: true
+  - id: skills-github-awesome-copilot-chrome-devtools
+    version: latest
+    source: awesome-copilot-skills-official
+    required: true
+  - id: skills-github-awesome-copilot-webapp-testing
+    version: latest
+    source: awesome-copilot-skills-official
+    required: true
 
 - id: ai-specialist
   name: AI Specialist
@@ -249,6 +324,10 @@ profiles:
     version: latest
     source: awesome-copilot-official
     required: true
+  - id: skills-github-awesome-copilot-agentic-eval
+    version: latest
+    source: awesome-copilot-skills-official
+    required: true
 
 - id: database-specialist
   name: Database Specialist
@@ -259,6 +338,10 @@ profiles:
   - id: database-data-management
     version: latest
     source: awesome-copilot-official
+    required: true
+  - id: skills-github-awesome-copilot-snowflake-semanticview
+    version: latest
+    source: awesome-copilot-skills-official
     required: true
 
 - id: planning-architect
@@ -287,6 +370,34 @@ profiles:
     version: latest
     source: awesome-copilot-official
     required: true
+  - id: skills-github-awesome-copilot-azure-resource-visualizer
+    version: latest
+    source: awesome-copilot-skills-official
+    required: true
+  - id: skills-github-awesome-copilot-plantuml-ascii
+    version: latest
+    source: awesome-copilot-skills-official
+    required: true
+  - id: skills-github-awesome-copilot-prd
+    version: latest
+    source: awesome-copilot-skills-official
+    required: true
+  - id: skills-github-awesome-copilot-refactor
+    version: latest
+    source: awesome-copilot-skills-official
+    required: true
+  - id: skills-github-awesome-copilot-git-commit
+    version: latest
+    source: awesome-copilot-skills-official
+    required: true
+  - id: skills-github-awesome-copilot-github-issues
+    version: latest
+    source: awesome-copilot-skills-official
+    required: true
+  - id: skills-github-awesome-copilot-legacy-circuit-mockups
+    version: latest
+    source: awesome-copilot-skills-official
+    required: true
 
 # Languages
 - id: javascript-developer
@@ -306,6 +417,18 @@ profiles:
   - id: typescript-mcp-development
     version: latest
     source: awesome-copilot-official
+    required: true
+  - id: skills-github-awesome-copilot-chrome-devtools
+    version: latest
+    source: awesome-copilot-skills-official
+    required: true
+  - id: skills-github-awesome-copilot-webapp-testing
+    version: latest
+    source: awesome-copilot-skills-official
+    required: true
+  - id: skills-github-awesome-copilot-web-design-reviewer
+    version: latest
+    source: awesome-copilot-skills-official
     required: true
 
 - id: python-developer
@@ -363,6 +486,18 @@ profiles:
   - id: openapi-to-application-csharp-dotnet
     version: latest
     source: awesome-copilot-official
+    required: true
+  - id: skills-github-awesome-copilot-nuget-manager
+    version: latest
+    source: awesome-copilot-skills-official
+    required: true
+  - id: skills-github-awesome-copilot-microsoft-code-reference
+    version: latest
+    source: awesome-copilot-skills-official
+    required: true
+  - id: skills-github-awesome-copilot-microsoft-docs
+    version: latest
+    source: awesome-copilot-skills-official
     required: true
 
 - id: go-developer
@@ -422,6 +557,38 @@ profiles:
     version: latest
     source: awesome-copilot-official
     required: true
+  - id: skills-github-awesome-copilot-appinsights-instrumentation
+    version: latest
+    source: awesome-copilot-skills-official
+    required: true
+  - id: skills-github-awesome-copilot-azure-deployment-preflight
+    version: latest
+    source: awesome-copilot-skills-official
+    required: true
+  - id: skills-github-awesome-copilot-azure-devops-cli
+    version: latest
+    source: awesome-copilot-skills-official
+    required: true
+  - id: skills-github-awesome-copilot-azure-resource-visualizer
+    version: latest
+    source: awesome-copilot-skills-official
+    required: true
+  - id: skills-github-awesome-copilot-azure-role-selector
+    version: latest
+    source: awesome-copilot-skills-official
+    required: true
+  - id: skills-github-awesome-copilot-azure-static-web-apps
+    version: latest
+    source: awesome-copilot-skills-official
+    required: true
+  - id: skills-github-awesome-copilot-microsoft-code-reference
+    version: latest
+    source: awesome-copilot-skills-official
+    required: true
+  - id: skills-github-awesome-copilot-microsoft-docs
+    version: latest
+    source: awesome-copilot-skills-official
+    required: true
 
 - id: microsoft365-specialist
   name: Microsoft 365 Specialist
@@ -436,6 +603,14 @@ profiles:
   - id: typespec-m365-copilot
     version: latest
     source: awesome-copilot-official
+    required: true
+  - id: skills-github-awesome-copilot-microsoft-code-reference
+    version: latest
+    source: awesome-copilot-skills-official
+    required: true
+  - id: skills-github-awesome-copilot-microsoft-docs
+    version: latest
+    source: awesome-copilot-skills-official
     required: true
 
 - id: power-platform-specialist
@@ -456,6 +631,10 @@ profiles:
     version: latest
     source: awesome-copilot-official
     required: true
+  - id: skills-github-awesome-copilot-microsoft-docs
+    version: latest
+    source: awesome-copilot-skills-official
+    required: true
 
 # Tools
 - id: sdk-developer
@@ -472,6 +651,22 @@ profiles:
     version: latest
     source: awesome-copilot-official
     required: true
+  - id: skills-github-awesome-copilot-make-skill-template
+    version: latest
+    source: awesome-copilot-skills-official
+    required: true
+  - id: skills-github-awesome-copilot-mcp-cli
+    version: latest
+    source: awesome-copilot-skills-official
+    required: true
+  - id: skills-github-awesome-copilot-vscode-ext-commands
+    version: latest
+    source: awesome-copilot-skills-official
+    required: true
+  - id: skills-github-awesome-copilot-vscode-ext-localization
+    version: latest
+    source: awesome-copilot-skills-official
+    required: true
 
 - id: meta-explorer
   name: Meta Explorer
@@ -482,4 +677,8 @@ profiles:
   - id: awesome-copilot
     version: latest
     source: awesome-copilot-official
+    required: true
+  - id: skills-github-awesome-copilot-make-skill-template
+    version: latest
+    source: awesome-copilot-skills-official
     required: true
