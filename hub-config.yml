@@ -1,7 +1,7 @@
 version: 1.0.0
 metadata:
-  name: My Awesome Hub
-  description: A curated list of prompts with hierarchical organization
+  name: Awesome Copilot Hub
+  description: A list of agentic primitives curated by Awesome Copilot Community
   maintainer: Waldek Herka
   updatedAt: '2025-11-29T22:02:24.607Z'
 sources:
@@ -18,444 +18,466 @@ sources:
     branch: main
     collectionsPath: collections
 profiles:
-# Languages
-- id: javascript-frontend
-  name: Frontend Web Development
-  description: Essential prompts for modern frontend web development with React, Angular, Vue, and more
+# Roles
+- id: frontend-developer
+  name: Frontend Developer
+  description: Comprehensive frontend development tools including web frameworks, testing, and security
   icon: "🌐"
-  path: ["Languages", "JavaScript"]
+  path: ["Roles"]
   bundles:
   - id: frontend-web-dev
     version: latest
     source: awesome-copilot-official
     required: true
-
-- id: javascript-nodejs
-  name: Node.js Development
-  description: Prompts for Node.js and TypeScript backend development
-  icon: "🟢"
-  path: ["Languages", "JavaScript"]
-  bundles:
-  - id: openapi-to-application-nodejs-nestjs
+  - id: testing-automation
+    version: latest
+    source: awesome-copilot-official
+    required: true
+  - id: security-best-practices
     version: latest
     source: awesome-copilot-official
     required: true
 
-- id: javascript-mcp
-  name: JavaScript MCP Development
-  description: Prompts for developing MCP servers in TypeScript/Node.js
-  icon: "🔗"
-  path: ["Languages", "JavaScript", "MCP"]
-  bundles:
-  - id: typescript-mcp-development
-    version: latest
-    source: awesome-copilot-official
-    required: true
-
-- id: python-general
-  name: Python Development
-  description: General Python development prompts
-  icon: "🐍"
-  path: ["Languages", "Python"]
-  bundles:
-  - id: dataverse-sdk-for-python
-    version: latest
-    source: awesome-copilot-official
-    required: true
-
-- id: python-mcp
-  name: Python MCP Development
-  description: Prompts for developing MCP servers in Python
-  icon: "🔗"
-  path: ["Languages", "Python", "MCP"]
-  bundles:
-  - id: python-mcp-development
-    version: latest
-    source: awesome-copilot-official
-    required: true
-
-- id: python-openapi
-  name: Python OpenAPI Code Generation
-  description: Prompts for generating Python applications from OpenAPI specs
-  icon: "📄"
-  path: ["Languages", "Python", "OpenAPI"]
-  bundles:
-  - id: openapi-to-application-python-fastapi
-    version: latest
-    source: awesome-copilot-official
-    required: true
-
-- id: java-general
-  name: Java Development
-  description: Comprehensive Java development prompts including Spring Boot and Quarkus
-  icon: "☕"
-  path: ["Languages", "Java"]
+- id: backend-developer
+  name: Backend Developer
+  description: Backend development across multiple languages including databases and security
+  icon: "⚙️"
+  path: ["Roles"]
   bundles:
   - id: java-development
     version: latest
     source: awesome-copilot-official
     required: true
-
-- id: java-mcp
-  name: Java MCP Development
-  description: Prompts for developing MCP servers in Java
-  icon: "🔗"
-  path: ["Languages", "Java", "MCP"]
-  bundles:
-  - id: java-mcp-development
+  - id: python-general
     version: latest
     source: awesome-copilot-official
     required: true
-
-- id: java-openapi
-  name: Java OpenAPI Code Generation
-  description: Prompts for generating Java Spring Boot applications from OpenAPI specs
-  icon: "📄"
-  path: ["Languages", "Java", "OpenAPI"]
-  bundles:
-  - id: openapi-to-application-java-spring-boot
-    version: latest
-    source: awesome-copilot-official
-    required: true
-
-- id: csharp-general
-  name: C# .NET Development
-  description: C# and .NET development prompts
-  icon: "🔷"
-  path: ["Languages", "C#"]
-  bundles:
   - id: csharp-dotnet-development
     version: latest
     source: awesome-copilot-official
     required: true
-
-- id: csharp-mcp
-  name: C# MCP Development
-  description: Prompts for developing MCP servers in C#
-  icon: "🔗"
-  path: ["Languages", "C#", "MCP"]
-  bundles:
-  - id: csharp-mcp-development
+  - id: database-data-management
+    version: latest
+    source: awesome-copilot-official
+    required: true
+  - id: security-best-practices
     version: latest
     source: awesome-copilot-official
     required: true
 
-- id: csharp-openapi
-  name: C# OpenAPI Code Generation
-  description: Prompts for generating C# .NET applications from OpenAPI specs
-  icon: "📄"
-  path: ["Languages", "C#", "OpenAPI"]
+- id: full-stack-developer
+  name: Full Stack Developer
+  description: Complete full-stack development toolkit
+  icon: "🔄"
+  path: ["Roles"]
   bundles:
-  - id: openapi-to-application-csharp-dotnet
+  - id: frontend-web-dev
+    version: latest
+    source: awesome-copilot-official
+    required: true
+  - id: java-development
+    version: latest
+    source: awesome-copilot-official
+    required: true
+  - id: python-general
+    version: latest
+    source: awesome-copilot-official
+    required: true
+  - id: csharp-dotnet-development
+    version: latest
+    source: awesome-copilot-official
+    required: true
+  - id: database-data-management
+    version: latest
+    source: awesome-copilot-official
+    required: true
+  - id: testing-automation
+    version: latest
+    source: awesome-copilot-official
+    required: true
+  - id: security-best-practices
     version: latest
     source: awesome-copilot-official
     required: true
 
-- id: go-mcp
-  name: Go MCP Development
-  description: Prompts for developing MCP servers in Go
-  icon: "🔗"
-  path: ["Languages", "Go", "MCP"]
-  bundles:
-  - id: go-mcp-development
-    version: latest
-    source: awesome-copilot-official
-    required: true
-
-- id: go-openapi
-  name: Go OpenAPI Code Generation
-  description: Prompts for generating Go applications from OpenAPI specs
-  icon: "📄"
-  path: ["Languages", "Go", "OpenAPI"]
-  bundles:
-  - id: openapi-to-application-go
-    version: latest
-    source: awesome-copilot-official
-    required: true
-
-- id: rust-mcp
-  name: Rust MCP Development
-  description: Prompts for developing MCP servers in Rust
-  icon: "🦀"
-  path: ["Languages", "Rust", "MCP"]
-  bundles:
-  - id: rust-mcp-development
-    version: latest
-    source: awesome-copilot-official
-    required: true
-
-- id: ruby-mcp
-  name: Ruby MCP Development
-  description: Prompts for developing MCP servers in Ruby
-  icon: "💎"
-  path: ["Languages", "Ruby", "MCP"]
-  bundles:
-  - id: ruby-mcp-development
-    version: latest
-    source: awesome-copilot-official
-    required: true
-
-- id: swift-mcp
-  name: Swift MCP Development
-  description: Prompts for developing MCP servers in Swift
-  icon: "🍎"
-  path: ["Languages", "Swift", "MCP"]
-  bundles:
-  - id: swift-mcp-development
-    version: latest
-    source: awesome-copilot-official
-    required: true
-
-- id: kotlin-mcp
-  name: Kotlin MCP Development
-  description: Prompts for developing MCP servers in Kotlin
-  icon: "🎯"
-  path: ["Languages", "Kotlin", "MCP"]
-  bundles:
-  - id: kotlin-mcp-development
-    version: latest
-    source: awesome-copilot-official
-    required: true
-
-- id: php-mcp
-  name: PHP MCP Development
-  description: Prompts for developing MCP servers in PHP
-  icon: "🐘"
-  path: ["Languages", "PHP", "MCP"]
-  bundles:
-  - id: php-mcp-development
-    version: latest
-    source: awesome-copilot-official
-    required: true
-
-- id: clojure-interactive
-  name: Clojure Interactive Programming
-  description: Prompts for interactive Clojure development with REPL
-  icon: "λ"
-  path: ["Languages", "Clojure"]
-  bundles:
-  - id: clojure-interactive-programming
-    version: latest
-    source: awesome-copilot-official
-    required: true
-
-# Domains
-- id: devops-oncall
-  name: DevOps On-Call
-  description: Prompts for DevOps incident response and on-call duties
-  icon: "🚨"
-  path: ["Domains", "DevOps"]
+- id: devops-engineer
+  name: DevOps Engineer
+  description: DevOps and cloud infrastructure development
+  icon: "🚀"
+  path: ["Roles"]
   bundles:
   - id: devops-oncall
     version: latest
     source: awesome-copilot-official
     required: true
+  - id: azure-cloud-development
+    version: latest
+    source: awesome-copilot-official
+    required: true
+  - id: pcf-development
+    version: latest
+    source: awesome-copilot-official
+    required: true
+  - id: security-best-practices
+    version: latest
+    source: awesome-copilot-official
+    required: true
 
-- id: security-best-practices
-  name: Security Best Practices
-  description: Prompts for implementing security best practices, accessibility, and performance optimization
+- id: ai-engineer
+  name: AI Engineer
+  description: AI and machine learning development
+  icon: "🤖"
+  path: ["Roles"]
+  bundles:
+  - id: ai-edge-tasks
+    version: latest
+    source: awesome-copilot-official
+    required: true
+  - id: python-general
+    version: latest
+    source: awesome-copilot-official
+    required: true
+  - id: python-mcp-development
+    version: latest
+    source: awesome-copilot-official
+    required: true
+
+- id: mcp-developer
+  name: MCP Developer
+  description: Model Context Protocol development across all supported languages
+  icon: "🔗"
+  path: ["Roles"]
+  bundles:
+  - id: typescript-mcp-development
+    version: latest
+    source: awesome-copilot-official
+    required: true
+  - id: python-mcp-development
+    version: latest
+    source: awesome-copilot-official
+    required: true
+  - id: java-mcp-development
+    version: latest
+    source: awesome-copilot-official
+    required: true
+  - id: csharp-mcp-development
+    version: latest
+    source: awesome-copilot-official
+    required: true
+  - id: go-mcp-development
+    version: latest
+    source: awesome-copilot-official
+    required: true
+  - id: rust-mcp-development
+    version: latest
+    source: awesome-copilot-official
+    required: true
+  - id: ruby-mcp-development
+    version: latest
+    source: awesome-copilot-official
+    required: true
+  - id: swift-mcp-development
+    version: latest
+    source: awesome-copilot-official
+    required: true
+  - id: kotlin-mcp-development
+    version: latest
+    source: awesome-copilot-official
+    required: true
+  - id: php-mcp-development
+    version: latest
+    source: awesome-copilot-official
+    required: true
+
+- id: openapi-developer
+  name: OpenAPI Developer
+  description: OpenAPI specification code generation across languages
+  icon: "📄"
+  path: ["Roles"]
+  bundles:
+  - id: openapi-to-application-nodejs-nestjs
+    version: latest
+    source: awesome-copilot-official
+    required: true
+  - id: openapi-to-application-python-fastapi
+    version: latest
+    source: awesome-copilot-official
+    required: true
+  - id: openapi-to-application-java-spring-boot
+    version: latest
+    source: awesome-copilot-official
+    required: true
+  - id: openapi-to-application-csharp-dotnet
+    version: latest
+    source: awesome-copilot-official
+    required: true
+  - id: openapi-to-application-go
+    version: latest
+    source: awesome-copilot-official
+    required: true
+
+# Domains
+- id: security-specialist
+  name: Security Specialist
+  description: Security best practices and compliance
   icon: "🔒"
-  path: ["Domains", "Security"]
+  path: ["Domains"]
   bundles:
   - id: security-best-practices
     version: latest
     source: awesome-copilot-official
     required: true
 
-- id: testing-automation
-  name: Testing Automation
-  description: Prompts for automated testing and QA processes
+- id: testing-specialist
+  name: Testing Specialist
+  description: Automated testing and QA processes
   icon: "🧪"
-  path: ["Domains", "Testing"]
+  path: ["Domains"]
   bundles:
   - id: testing-automation
     version: latest
     source: awesome-copilot-official
     required: true
 
-- id: ai-edge-tasks
-  name: Edge AI Tasks
-  description: Prompts for AI tasks including architecture, planning, research, and implementation
+- id: ai-specialist
+  name: AI Specialist
+  description: AI tasks, architecture, and implementation
   icon: "🤖"
-  path: ["Domains", "AI"]
+  path: ["Domains"]
   bundles:
-  - id: edge-ai-tasks
+  - id: ai-edge-tasks
     version: latest
     source: awesome-copilot-official
     required: true
 
-- id: database-management
-  name: Database Data Management
-  description: Prompts for database management and data operations
+- id: database-specialist
+  name: Database Specialist
+  description: Database management and data operations
   icon: "🗄️"
-  path: ["Domains", "Database"]
+  path: ["Domains"]
   bundles:
   - id: database-data-management
     version: latest
     source: awesome-copilot-official
     required: true
 
-- id: project-planning
-  name: Project Planning
-  description: Prompts for project planning and management
+- id: planning-architect
+  name: Planning & Architecture
+  description: Project planning, technical spikes, software analysis, and team engineering
   icon: "📋"
-  path: ["Domains", "Planning"]
+  path: ["Domains"]
   bundles:
   - id: project-planning
     version: latest
     source: awesome-copilot-official
     required: true
-
-- id: technical-spike
-  name: Technical Spike
-  description: Prompts for technical spike investigations and validation
-  icon: "🔍"
-  path: ["Domains", "Planning"]
-  bundles:
   - id: technical-spike
     version: latest
     source: awesome-copilot-official
     required: true
-
-- id: software-analysis
-  name: Software Analysis
-  description: Prompts for software analysis, architecture, quality, and impact analysis
-  icon: "📊"
-  path: ["Domains", "Planning"]
-  bundles:
   - id: cast-imaging
     version: latest
     source: awesome-copilot-official
     required: true
-
-- id: team-engineering
-  name: Software Engineering Team
-  description: Prompts for team-based software engineering, security, UX, architecture, and AI ethics
-  icon: "👥"
-  path: ["Domains", "Planning"]
-  bundles:
   - id: software-engineering-team
     version: latest
     source: awesome-copilot-official
     required: true
-
-- id: structured-autonomy
-  name: Structured Autonomy
-  description: Prompts for planning, agents, and structured autonomy
-  icon: "🧠"
-  path: ["Domains", "Planning"]
-  bundles:
   - id: structured-autonomy-collection
     version: latest
     source: awesome-copilot-official
     required: true
 
+# Languages
+- id: javascript-developer
+  name: JavaScript/TypeScript Developer
+  description: Frontend, backend, and MCP development for JS/TS
+  icon: "🟨"
+  path: ["Languages"]
+  bundles:
+  - id: frontend-web-dev
+    version: latest
+    source: awesome-copilot-official
+    required: true
+  - id: openapi-to-application-nodejs-nestjs
+    version: latest
+    source: awesome-copilot-official
+    required: true
+  - id: typescript-mcp-development
+    version: latest
+    source: awesome-copilot-official
+    required: true
+
+- id: python-developer
+  name: Python Developer
+  description: General Python development, MCP, and OpenAPI
+  icon: "🐍"
+  path: ["Languages"]
+  bundles:
+  - id: dataverse-sdk-for-python
+    version: latest
+    source: awesome-copilot-official
+    required: true
+  - id: python-mcp-development
+    version: latest
+    source: awesome-copilot-official
+    required: true
+  - id: openapi-to-application-python-fastapi
+    version: latest
+    source: awesome-copilot-official
+    required: true
+
+- id: java-developer
+  name: Java Developer
+  description: Java development, MCP, and OpenAPI
+  icon: "☕"
+  path: ["Languages"]
+  bundles:
+  - id: java-development
+    version: latest
+    source: awesome-copilot-official
+    required: true
+  - id: java-mcp-development
+    version: latest
+    source: awesome-copilot-official
+    required: true
+  - id: openapi-to-application-java-spring-boot
+    version: latest
+    source: awesome-copilot-official
+    required: true
+
+- id: csharp-developer
+  name: C# Developer
+  description: C# .NET development, MCP, and OpenAPI
+  icon: "🔷"
+  path: ["Languages"]
+  bundles:
+  - id: csharp-dotnet-development
+    version: latest
+    source: awesome-copilot-official
+    required: true
+  - id: csharp-mcp-development
+    version: latest
+    source: awesome-copilot-official
+    required: true
+  - id: openapi-to-application-csharp-dotnet
+    version: latest
+    source: awesome-copilot-official
+    required: true
+
+- id: go-developer
+  name: Go Developer
+  description: Go MCP and OpenAPI development
+  icon: "🔹"
+  path: ["Languages"]
+  bundles:
+  - id: go-mcp-development
+    version: latest
+    source: awesome-copilot-official
+    required: true
+  - id: openapi-to-application-go
+    version: latest
+    source: awesome-copilot-official
+    required: true
+
+- id: other-languages
+  name: Other Languages
+  description: MCP development for Rust, Ruby, Swift, Kotlin, PHP, Clojure
+  icon: "🔧"
+  path: ["Languages"]
+  bundles:
+  - id: rust-mcp-development
+    version: latest
+    source: awesome-copilot-official
+    required: true
+  - id: ruby-mcp-development
+    version: latest
+    source: awesome-copilot-official
+    required: true
+  - id: swift-mcp-development
+    version: latest
+    source: awesome-copilot-official
+    required: true
+  - id: kotlin-mcp-development
+    version: latest
+    source: awesome-copilot-official
+    required: true
+  - id: php-mcp-development
+    version: latest
+    source: awesome-copilot-official
+    required: true
+  - id: clojure-interactive-programming
+    version: latest
+    source: awesome-copilot-official
+    required: true
+
 # Platforms
-- id: azure-cloud
-  name: Azure Cloud Development
-  description: Prompts for Azure cloud development and services
+- id: azure-specialist
+  name: Azure Specialist
+  description: Azure cloud development
   icon: "☁️"
-  path: ["Platforms", "Azure"]
+  path: ["Platforms"]
   bundles:
   - id: azure-cloud-development
     version: latest
     source: awesome-copilot-official
     required: true
 
-- id: pcf-development
-  name: PCF Development
-  description: Prompts for Pivotal Cloud Foundry development
-  icon: "☁️"
-  path: ["Platforms", "Cloud Foundry"]
-  bundles:
-  - id: pcf-development
-    version: latest
-    source: awesome-copilot-official
-    required: true
-
-- id: microsoft365-copilot
-  name: Microsoft 365 Copilot
-  description: Prompts for Microsoft 365 Copilot integration and declarative agents
+- id: microsoft365-specialist
+  name: Microsoft 365 Specialist
+  description: Microsoft 365 Copilot and TypeSpec development
   icon: "📧"
-  path: ["Platforms", "Microsoft 365"]
+  path: ["Platforms"]
   bundles:
   - id: mcp-m365-copilot
     version: latest
     source: awesome-copilot-official
     required: true
-
-- id: microsoft365-typespec
-  name: Microsoft 365 TypeSpec Development
-  description: Prompts for TypeSpec development for Microsoft 365 Copilot
-  icon: "📝"
-  path: ["Platforms", "Microsoft 365"]
-  bundles:
   - id: typespec-m365-copilot
     version: latest
     source: awesome-copilot-official
     required: true
 
-- id: power-platform-apps
-  name: Power Apps Code Apps
-  description: Prompts for developing code apps in Power Platform
+- id: power-platform-specialist
+  name: Power Platform Specialist
+  description: Power Apps, Power BI, and MCP connectors
   icon: "⚡"
-  path: ["Platforms", "Power Platform"]
+  path: ["Platforms"]
   bundles:
   - id: power-apps-code-apps
     version: latest
     source: awesome-copilot-official
     required: true
-
-- id: power-bi
-  name: Power BI Development
-  description: Prompts for Power BI development and data visualization
-  icon: "📊"
-  path: ["Platforms", "Power Platform"]
-  bundles:
   - id: power-bi-development
     version: latest
     source: awesome-copilot-official
     required: true
-
-- id: power-platform-mcp
-  name: Power Platform MCP Connectors
-  description: Prompts for developing MCP connectors for Power Platform
-  icon: "🔗"
-  path: ["Platforms", "Power Platform", "MCP"]
-  bundles:
   - id: power-platform-mcp-connector-development
     version: latest
     source: awesome-copilot-official
     required: true
 
-# Tools & SDKs
-- id: copilot-sdk
-  name: Copilot SDK
-  description: Prompts for Copilot SDK development across multiple languages
-  icon: "🤖"
-  path: ["Tools", "SDKs"]
+# Tools
+- id: sdk-developer
+  name: SDK Developer
+  description: Copilot SDK and partner integrations
+  icon: "🛠️"
+  path: ["Tools"]
   bundles:
   - id: copilot-sdk
     version: latest
     source: awesome-copilot-official
     required: true
-
-- id: partners
-  name: Partners & Integrations
-  description: Prompts for partner integrations and collaborations
-  icon: "🤝"
-  path: ["Tools", "Integrations"]
-  bundles:
   - id: partners
     version: latest
     source: awesome-copilot-official
     required: true
 
-- id: awesome-copilot-meta
-  name: Awesome Copilot Meta
-  description: Meta prompts for GitHub Copilot discovery, prompt engineering, and agents
+- id: meta-explorer
+  name: Meta Explorer
+  description: Meta prompts for Copilot discovery and prompt engineering
   icon: "⭐"
-  path: ["Tools", "Meta"]
+  path: ["Tools"]
   bundles:
   - id: awesome-copilot
     version: latest
