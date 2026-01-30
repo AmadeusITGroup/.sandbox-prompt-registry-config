@@ -9,6 +9,7 @@ engagement:
   backend:
     type: github-discussions
     repository: AmadeusITGroup/.prompt-registry-engagement
+    collectionsUrl: https://raw.githubusercontent.com/AmadeusITGroup/.prompt-registry-engagement/main/collections.yaml
   telemetry:
     enabled: false
     anonymize: true
